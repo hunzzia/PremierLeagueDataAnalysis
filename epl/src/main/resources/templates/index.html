@@ -1,344 +1,789 @@
-<!doctype html>
-<html class="no-js" lang="" xmlns:th="http://www.thymeleaf.org" >
+﻿<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<title>Template</title>
-	<th:block th:include = "template/part/headLayout"></th:block>
-</head>	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="IAMX, One Page Responsive HTML Resume Template">
+  <meta name="keywords" content="onepage, resume, CV HTML template, personal Vcard, html resume, free resume template, free HTML template, free bootstrap template, personal portfolio, free html portfolio">
+	<meta name="author" content="http://trendytheme.net/">
+
+	<title>신입개발자 이상훈</title>
+
+  <!-- Web Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+	<!-- Bootstrap core CSS -->
+	<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<!-- Font Awesome CSS -->
+	<link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
+	<!-- Animate css -->
+  <link href="assets/css/animate.css" rel="stylesheet">
+  <!-- Magnific css -->
+	<link href="assets/css/magnific-popup.css" rel="stylesheet">
+	<!-- Custom styles CSS -->
+	<link href="assets/css/indexstyle.css" rel="stylesheet" media="screen">
+  <!-- Responsive CSS -->
+  <link href="assets/css/responsive.css" rel="stylesheet">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <link rel="shortcut icon" href="assets/images/ico/favicon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/images/ico/apple-touch-icon-57-precomposed.png">
+
+</head>
 
 <body>
-    <!-- Left Panel -->
-    	<th:block th:include = "template/part/aside"></th:block>
-    <!-- /#left-panel -->
-    
-    <!-- Right Panel -->
-    <div id="right-panel" class="right-panel">
-        <!-- Header-->
-        	<div th:include ="template/part/topBar::topBar"></div>
-        <!-- /#header -->
-        
-        <!-- Content -->
-		<div class="content">
-
-			<div class="animated fadeIn">
-				<div class="row">
-					<div class="col-lg-3">
-						<div class="card">
-							<div class="card-body">
-								<button class = "btn btn-outline-success btn-block" onclick = "location.href = 'getPlayerList'"><i class="fa fa-th-list"></i> 선수 리스트</button>
-								<button class = "btn btn-outline-success btn-block" onclick = "location.href = 'getTeamList'"><i class="fa fa-th-list"></i> 팀 리스트　</button>
-								<button class = "btn btn-outline-success btn-block" onclick = "location.href = 'getRefreeList'"><i class="fa fa-th-list"></i> 심판 리스트</button>
-								<button class = "btn btn-outline-success btn-block" onclick = "location.href = 'getPlayerList'"><i class="fa fa-th-list"></i> 감독 리스트</button>
-									
-								
-							</div>
-						</div>
-						<!-- /# card -->
-					</div>
-					<!-- /# column -->
-					<div class="col-lg-3">
-						<div class="card">
-							<div class="card-body">
-								<button class = "btn btn-outline-primary btn-block" onclick = "location.href = 'addPlayer'"><i class="fa fa-plus"></i> 선수 추가</button>
-								<button class = "btn btn-outline-primary btn-block" onclick = "location.href = 'addTeam'"><i class="fa fa-plus"></i> 팀 추가　</button>
-								<button class = "btn btn-outline-primary btn-block" onclick = "location.href = 'addRefree'"><i class="fa fa-plus"></i> 심판 추가</button>
-								<button class = "btn btn-outline-primary btn-block" onclick = "location.href = 'addCoach'"><i class="fa fa-plus"></i> 감독 추가</button>
-							</div>
-						</div>
-						<!-- /# card -->
-					</div>
-
-					<div class="col-lg-3">
-						<div class="card">
-							<div class="card-body">
-								<button class = "btn btn-outline-warning btn-block" onclick = "location.href = 'modifyPlayer'"><i class="fa fa-cogs"></i> 선수 수정</button>
-								<button class = "btn btn-outline-warning btn-block" onclick = "location.href = 'leagueUpdate'"><i class="fa fa-cogs"></i> 팀 변경　</button>
-								<button class = "btn btn-outline-warning btn-block" onclick = "location.href = 'getPlayerList'"><i class="fa fa-cogs"></i> 심판 수정 </button>
-								<button class = "btn btn-outline-warning btn-block" onclick = "location.href = 'getPlayerList'"><i class="fa fa-cogs"></i> 감독 수정 </button>
-							</div>
-						</div>
-						<!-- /# card -->
-					</div>
-
-					<div class="col-lg-3">
-						<div class="card">
-							<div class="card-body">
-								<button class = "btn btn-outline-secondary btn-block" onclick = "location.href = 'adminMemberList'"><i class="fa fa-user"></i> 회원 관리　</button>
-								<button class = "btn btn-outline-secondary btn-block" onclick = "location.href = 'adminNotice'"><i class="fa fa-user"></i> 공지사함 관리 </button>
-								<button class = "btn btn-outline-secondary btn-block" onclick = "location.href = 'adminBoardAllCategory'"><i class="fa fa-user"></i> 게시판 관리　</button>
-								<button class = "btn btn-outline-secondary btn-block" onclick = "location.href = 'scheduler'"><i class="fa fa-user"></i> 스케줄 관리　</button>
-							</div>
-						</div>
-						<!-- /# card -->
-					</div>
-				</div>
-
-
-
-				<div class="row">
-					<div class="col-lg-6">
-						<div class="card">
-							<div class="card-body">
-								<h4 class="mb-3">게시판별 접속자 수</h4>
-								<div class="flot-container">
-									<div id="flot-pie" class="flot-pie-container"></div>
-								</div>
-							</div>
-						</div>
-						<!-- /# card -->
-					</div>
-					<!-- /# column -->
-					<div class="col-lg-6">
-						<div class="card">
-							<div class="card-body">
-								<h4 class="mb-3">페이지 방문자 수</h4>
-								<div class="flot-container">
-									<div id="chart1" style="width: 100%; height: 275px;"></div>
-								</div>
-							</div>
-						</div>
-						<!-- /# card -->
-					</div>
-				</div>
-				<!-- /# row -->
-			</div>
-			<!-- .animated -->
-			<div class="card">
-				<div class="card">
-					<div class="card-header">
-						<strong class="card-title"><font
-							style="vertical-align: inherit;"><font
-								style="vertical-align: inherit;">관리자</font></font></strong>
-					</div>
-					<div class=" order-table ov-h">
-						<table class="table ">
-							<thead>
-								<tr>
-									<th class="serial"><font style="vertical-align: inherit;"><font
-											style="vertical-align: inherit;">#</font></font></th>
-									<th class="avatar"><font style="vertical-align: inherit;"><font
-											style="vertical-align: inherit;">ID</font></font></th>
-									<th><font style="vertical-align: inherit;"><font
-											style="vertical-align: inherit;">이름</font></font></th>
-									<th><font style="vertical-align: inherit;"><font
-											style="vertical-align: inherit;">E-Mail</font></font></th>
-									<th><font style="vertical-align: inherit;"><font
-											style="vertical-align: inherit;">상태</font></font></th>
-								</tr>
-							</thead>
-							<tbody id="adminList">
-								
-							</tbody>
-						</table>
-					</div>
-					<!-- /.table-stats -->
-					<!-- <section class="card">
-						<div class="card-header user-header alt bg-dark">
-							<div class="media">
-								<a href="#"> <img
-									class="align-self-center rounded-circle mr-3"
-									style="width: 85px; height: 85px;" alt=""
-									src="images/admin.jpg">
-								</a>
-								<div class="media-body">
-									<h2 class="text-light display-6">
-										<font style="vertical-align: inherit;"><font
-											style="vertical-align: inherit;">짐도</font></font>
-									</h2>
-									<p>
-										<font style="vertical-align: inherit;"><font
-											style="vertical-align: inherit;">프로젝트 매니저</font></font>
-									</p>
-								</div>
-							</div>
-						</div>
-
-
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item"><a href="#"> <i
-									class="fa fa-envelope-o"></i><font
-									style="vertical-align: inherit;"><font
-										style="vertical-align: inherit;">메일받은 편지함 </font></font><span
-									class="badge badge-primary pull-right"><font
-										style="vertical-align: inherit;"><font
-											style="vertical-align: inherit;">10</font></font></span></a></li>
-							<li class="list-group-item"><a href="#"> <i
-									class="fa fa-tasks"></i><font style="vertical-align: inherit;"><font
-										style="vertical-align: inherit;">최근 활동 </font></font><span
-									class="badge badge-danger pull-right"><font
-										style="vertical-align: inherit;"><font
-											style="vertical-align: inherit;">15</font></font></span></a></li>
-							<li class="list-group-item"><a href="#"> <i
-									class="fa fa-bell-o"></i><font style="vertical-align: inherit;"><font
-										style="vertical-align: inherit;">알림 </font></font><span
-									class="badge badge-success pull-right"><font
-										style="vertical-align: inherit;"><font
-											style="vertical-align: inherit;">11</font></font></span></a></li>
-							<li class="list-group-item"><a href="#"> <i
-									class="fa fa-comments-o"></i><font
-									style="vertical-align: inherit;"><font
-										style="vertical-align: inherit;">메시지 </font></font><span
-									class="badge badge-warning pull-right r-activity"><font
-										style="vertical-align: inherit;"><font
-											style="vertical-align: inherit;">03</font></font></span></a></li>
-						</ul>
-
-					</section>
-					/admin Profile -->
-				</div>
-			</div>
+	<!-- Preloader -->
+	<div id="tt-preloader">
+		<div id="pre-status">
+			<div class="preload-placeholder"></div>
 		</div>
-		<!-- /.content -->		
+	</div>
+
+
+
+
+
+	<!-- Navigation -->
+	<header class="header">
+		<nav class="navbar navbar-custom" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt=""></a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="custom-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#about">home</a></li>
+						<li><a href="#resume">Resume</a></li>
+						<li><a href="#skills">Skills</a></li>
+						<li><a href="#works">Works</a></li>
+						<li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+			</div><!-- .container -->
+		</nav>
+	</header><!-- End Navigation -->
+
+
+    <!-- About Section -->
+    <section id="about" class="about-section section-padding">
+      <div class="container">
+        <h2 class="section-title wow fadeInUp">신입개발자 이상훈</h2>
+
+        <div class="row">
+
+          <div class="col-md-4 col-md-push-8">
+            <div class="biography">
+              <div class="myphoto">
+                <img src="images/index/leeSangHun.jpg" alt="">
+              </div>
+              <ul>
+                <li><strong>이름:</strong> 이 상훈</li>
+                <li><strong>생일:</strong> 1996-12-04</li>
+                <li><strong>주소:</strong> 경기도 / 수원시</li>
+                <li><strong>국적:</strong> 한국</li>
+                <li><strong>번호:</strong> 010-2326-8497</li>
+                <li><strong>메일:</strong> das6521@naver.com</li>
+              </ul>
+            </div>
+          </div> <!-- col-md-4 -->
+
+          <div class="col-md-8 col-md-pull-4">
+            <div class="short-info wow fadeInUp">
+              <h3>소개</h3>
+              <p>안녕하세요 신입 개발자를 꿈꾸는 이상훈입니다. 잔잔한 바다에서는 좋은 뱃사공이 만들어지지 않듯이 열정을 갖고 개발자공부에 노력하고있으며</p>
+              <p>저는 실패를 두려워하지 않으며 그 해답을 찾을 수 있도록 끊임없이 노력하는 자세로 개발에 임하고 있습니다.</p>
+              <br>
+            <div class="short-info wow fadeInUp">
+              <h3>경험</h3>
+              <p>저는  국비 지원 교육을 통해 다양한 경험들을 했으며 그 밖에도 자기개발을 통해 여러 경험을 자신의 것으로 만들기위해 </p><p>노력했습니다.</p>
+
+              <ul class="list-check">
+                <li>Team project</li>
+                <li>JAVA</li>
+                <li>jquery</li>
+                <li>python</li>
+                <li>Spring Devtool</li>
+                <li>MySql</li>
+              </ul>
+            </div>
+
+            <div class="my-signature">
+              <img src="assets/images/sign.png" alt="">
+            </div>
+
+            <div class="download-button">
+              <a class="btn btn-info btn-lg" href="#contact"><i class="fa fa-paper-plane"></i>Send me message</a>
+              <a class="btn btn-primary btn-lg" href="#"><i class="fa fa-download"></i>download my cv</a>
+            </div>
+          </div>
+
+
+        </div> <!-- /.row -->
+      </div> <!-- /.container -->
+      </div>
+    </section><!-- End About Section -->
+
+
+    <!-- Video Section -->
+    <section id="video" class="video-section">
+      <div class="tf-bg-overlay">
+
+        <div class="container">
+
+          <div class="video-intro">
+             <a class="popup-video" href="https://www.youtube.com/watch?v=LGOjcu0HRec"> <i class="fa fa-play"></i>  </a>
+             <h2>Video Introducing</h2>
+          </div>
+
+        </div>
+
+        <!--/.container-->
+      </div>
+      <!--/.overlay-->
+    </section>
+    <!-- /.Video Section -->
+
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume-section section-padding">
+        <div class="container">
+            <h2 class="section-title wow fadeInUp">Resume</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="resume-title">
+                        <h3>교육</h3>
+                    </div>
+                    <div class="resume">
+                        <ul class="timeline">
+                            <li>
+                                <div class="posted-date">
+                                    <span class="month">2015.02 - 2020.03</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3>두원공과대학교 졸업</h3>
+                                            <span>학과 : 스마트소프트웨어</span>
+                                        </div><!-- /timeline-heading -->
+
+                                        <div class="timeline-body">
+                                            <P>운영 체제와 JAVA 그리고 HTML의 기본 개념을 배움</P>
+                                            <p>학점 :만점</p>
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div><!-- /timeline-panel -->
+                            </li>
+
+                            <li class="timeline-inverted">
+                                <div class="posted-date">
+                                    <span class="month">2012.03 - 2015.02</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3>권선고등학교 졸업</h3>
+                                            <span>인문계 고등학교</span>
+                                        </div><!-- /timeline-heading -->
+
+                                        <div class="timeline-body">
+                                            <p>직업 체험 프로그램 을 통해 웹개발에 관심을갖기 시작</p>
+                                            <p>졸업후 웹 개발 진로설정</p>
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div> <!-- /timeline-panel -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- /row -->
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="resume-title">
+                        <h3>그 외 경험</h3>
+                    </div>
+                    <div class="resume">
+                        <ul class="timeline">
+                            <li>
+                                <div class="posted-date">
+                                  <span class="month">2019.07 - 2020.01</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3>국비지원교육 수료</h3>
+                                            <span>구디아카데미 디지털융합 1차 SW 수료</span>
+                                        </div><!-- /timeline-heading -->
+
+                                        <div class="timeline-body">
+                                            <p>- Web Front-End 구현 :<br>HTML, CSS, JAVASCRIPT, JQuery, Ajax 활용 가능<br>- Web Application 구현 :<br>JAVA, Python, JSP, Spring Framework, MySQL 활용 가능</p>
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div> <!-- /timeline-panel -->
+                            </li>
+
+                            <li class="timeline-inverted">
+                                <div class="posted-date">
+                                  <span class="month">2019.10 - 2019.12</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3>알고리즘 스터디 (멘토-멘티)</h3>
+                                            <span>
+												- Github Repository(Source) : 
+												<a href="https://github.com/hunzzia/AlgorithmCode" style="color: black;">
+												AlgorithmStudy</a>
+											</span>
+                                        </div><!-- /timeline-heading -->
+
+                                        <div class="timeline-body">
+                                            <p>- 알고리즘 기초(정렬, 검색, 해쉬 등),
+                                            	<br> 자료구조(선형, 비선형)에 대한 스터디<br>-구디 아카데미(국비지원교육) 스터디 진행</p>
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div><!-- /timeline-panel -->
+                            </li>
+                            
+                            <li>
+                                <div class="posted-date">
+                                  <span class="month">2016.10 - 2018.7</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3>대한육군 통신병</h3>
+                                            <span>
+												육군 만기전역
+											</span>
+                                        </div><!-- /timeline-heading -->
+
+                                        <div class="timeline-body">
+                                            <p>-최신식 ncs 관리를 통한 체계적인 네트워크 운용 <br> -Hctr 운용병으로서 대대 통신연결 장비 설치</p>
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div><!-- /timeline-panel -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- /row -->
+        </div><!-- /.container -->
+    </section><!-- End Resume Section -->
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section section-padding">
+      <div class="container">
+        <h2 class="section-title wow fadeInUp">사용한 기술</h2>
+
+        <!-- <div class="row">
+          <div class="col-md-6">
+            <div class="skill-progress">
+              <div class="skill-title"><h3>UX	 Design</h3></div> 
+              <div class="progress">
+                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" ><span>95%</span>
+                </div>
+              </div>/.progress
+            </div>/.skill-progress
+
+            <div class="skill-progress">
+              <div class="skill-title"><h3>Visual Design</h3></div> 
+              <div class="progress">
+                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" ><span>80%</span>
+                </div>
+              </div>/.progress
+            </div>/.skill-progress
+            <div class="skill-progress">
+              <div class="skill-title"><h3>Business Design</h3></div>  
+              <div class="progress">
+                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" ><span>75%</span>
+                </div>
+              </div>/.progress
+            </div>/.skill-progress
+          </div>/.col-md-6
+
+          <div class="col-md-6">
+            <div class="skill-progress">
+              <div class="skill-title"><h3>Branding Design</h3></div> 
+              <div class="progress">
+                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" ><span>95%</span>
+                </div>
+              </div>/.progress
+            </div>/.skill-progress
+            <div class="skill-progress">
+              <div class="skill-title"><h3>Motion Graphic</h3></div> 
+              <div class="progress">
+                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" ><span>80%</span>
+                </div>
+              </div>/.progress
+            </div>/.skill-progress
+            <div class="skill-progress">
+              <div class="skill-title"><h3>Flyers Designing</h3></div>  
+              <div class="progress">
+                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" ><span>75%</span>
+                </div>
+              </div>/.progress
+            </div>/.skill-progress
+          </div>/.col-md-6
+        </div>/.row -->
+		<div class="row">
+	        <div class="skill-chart text-left">
+	          <h3>More skills</h3>
+	        </div>
+	        <div class="row more-skill text-center">
+          <div class="col-xs-12 col-sm-4 col-md-2">
+              <div class="chart" data-percent="91" data-color="e74c3c">
+                    <span class="percent"></span>
+                    <div class="chart-text">
+                      <span>leadership</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-2">
+              <div class="chart" data-percent="23" data-color="2ecc71">
+                    <span class="percent"></span>
+                    <div class="chart-text">
+                      <span>Creativity</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+	        <div class="skill-chart text-right">
+	          <h3>More skills</h3>
+	        </div>
+        </div>
         
         
-        <div class="clearfix"></div>
+        <div class="row more-skill text-center">
+          <div class="col-xs-12 col-sm-4 col-md-2">
+              <div class="chart" data-percent="91" data-color="e74c3c">
+                    <span class="percent"></span>
+                    <div class="chart-text">
+                      <span>leadership</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-2">
+              <div class="chart" data-percent="23" data-color="2ecc71">
+                    <span class="percent"></span>
+                    <div class="chart-text">
+                      <span>Creativity</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-2">
+              <div class="chart" data-percent="68" data-color="3498db">
+                    <span class="percent"></span>
+                    <div class="chart-text">
+                      <span>Management</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-2">
+              <div class="chart" data-percent="68" data-color="3498db">
+                    <span class="percent"></span>
+                    <div class="chart-text">
+                      <span>Branding</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-2">
+              <div class="chart" data-percent="68" data-color="3498db">
+                    <span class="percent"></span>
+                    <div class="chart-text">
+                      <span>Marketing</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-2">
+              <div class="chart" data-percent="68" data-color="3498db">
+                    <span class="percent"></span>
+                    <div class="chart-text">
+                      <span>Motivation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </div><!-- /.container -->
+    </section><!-- End Skills Section -->
+
+
+    <!-- Works Section -->
+    <section id="works" class="works-section section-padding">
+      <div class="container">
+        <h2 class="section-title wow fadeInUp">포트폴리오</h2>
+
+        <ul class="list-inline" id="filter">
+            <li><a class="active" data-group="all">전체</a></li>
+            <li><a data-group="web">웹</a></li>
+        </ul>
+
+        <div class="row">
+          <div id="grid">
+            <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
+              <div class="portfolio-bg">
+                <div class="portfolio">
+                  <div class="tt-overlay"></div>
+                  <div class="links">
+                    <a class="image-link" href="assets/images/works/portfolio-1.jpg"><i class="fa fa-search-plus"></i></a>
+                    <a href="/main"><i class="fa fa-link"></i></a>                          
+                  </div><!-- /.links -->
+                  <img src="images/index/epl.JPG" alt="image"> 
+                  <div class="portfolio-info">
+                    <h3>EPL TEAM PROJECT</h3>
+                  </div><!-- /.portfolio-info -->
+                </div><!-- /.portfolio -->
+              </div><!-- /.portfolio-bg -->
+            </div><!-- /.portfolio-item -->
+
+
+            <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
+              <div class="portfolio-bg">
+                <div class="portfolio">
+                  <div class="tt-overlay"></div>
+                  <div class="links">
+                 	<!--  사용한 언어 사진과 링크 사진 -->
+                    <a class="image-link" href="assets/images/works/portfolio-2.jpg"><i class="fa fa-search-plus"></i></a>
+                    <a href="/employees/index"><i class="fa fa-link"></i></a>                          
+                  </div><!-- /.links -->
+                  <img src="images/index/employees.JPG" alt="image"> 
+                  <div class="portfolio-info">
+                    <h3>EMPLOYEES</h3>
+                  </div><!-- /.portfolio-info -->
+                </div><!-- /.portfolio -->
+              </div><!-- /.portfolio-bg -->
+            </div><!-- /.portfolio-item -->
+            
+          </div><!-- /#grid -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- End Works Section -->
+
+
+    <!-- Facts Section -->
+    <section id="facts" class="facts-section text-center" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
+      <div class="tt-overlay-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="count-wrap">
+                <div class="col-sm-3 col-xs-6">
+                  <i class="fa fa-flask"></i>
+                  <h3 class="timer">7</h3>
+                  <p>Years of Experience</p>
+                </div>
+                <div class="col-sm-3 col-xs-6"> 
+                  <i class="fa fa-thumbs-up"></i>
+                  <h3 class="timer">651</h3>                
+                  <p>Projects Done</p>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                  <i class="fa fa-users"></i>
+                  <h3 class="timer">251</h3> 
+                  <p>Happy Clients</p>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                  <i class="fa fa-trophy"></i>
+                  <h3 class="timer">5</h3> 
+                  <p>Awards Won</p>
+                </div>
+              </div><!-- /count-wrap -->
+            </div><!-- /.col-md-12 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div>
+    </section> <!-- End Facts Section -->
+
+
+    <!-- Blog Section -->
+    <section id="blog" class="latest-blog-section section-padding">
+      <div class="container">
+        <h2 class="section-title wow fadeInUp">Latest Post</h2>
+
+        <div class="row">
+          <div class="col-sm-4">
+            <article class="blog-post-wrapper">
+              <div class="figure">    
+                <div class="post-thumbnail">
+                  <a href="#"><img src="assets/images/blog/01.jpg" class="img-responsive " alt=""></a>
+                </div>
+                  <i class="fa fa-file-photo-o"></i>
+              </div><!-- /.figure -->
+              <header class="entry-header">
+                <div class="post-meta">
+                  <span class="the-category"> 
+                    <a href="#">Print Design,</a> <a href="#">Photoshop</a>
+                  </span>
+                </div>
+                <h2 class="entry-title"><a href="#" rel="">Common fonts used for newspaper template design</a></h2>
+                <hr>
+                <div class="entry-meta">
+                  <ul class="list-inline">
+                    <li>
+                      <span class="the-author">
+                        <a href="#">Admin</a> 
+                      </span>
+                    </li>
+                    <li>
+                      <span class="the-time">
+                        <a href="#">06 Jan 2015</a>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="the-share">
+                        <a href="#" title="share">30</a>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="the-comments">
+                        <a href="#" title="">05</a>
+                      </span>
+                    </li>
+                  </ul>
+                </div><!-- .entry-meta -->
+              </header><!-- .entry-header -->
+            </article>
+          </div><!-- /.col-sm-4 -->
+          <div class="col-sm-4">
+            <article class="blog-post-wrapper">
+              <div class="figure">    
+                <div class="post-thumbnail">
+                  <a href="#"><img src="assets/images/blog/02.jpg" class="img-responsive " alt=""></a>
+                </div>
+                  <i class="fa fa-file-video-o"></i>
+              </div><!-- /.figure -->
+              <header class="entry-header">
+                <div class="post-meta">
+                  <span class="the-category"> 
+                    <a href="#">Print Design,</a> <a href="#">Photoshop</a>
+                  </span>
+                </div>
+                <h2 class="entry-title"><a href="#" rel="">What is the style of font called that is typically</a></h2>
+                <hr>
+                <div class="entry-meta">
+                  <ul class="list-inline">
+                    <li>
+                      <span class="the-author">
+                        <a href="#">Admin</a> 
+                      </span>
+                    </li>
+                    <li>
+                      <span class="the-time">
+                        <a href="#">06 Jan 2015</a>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="the-share">
+                        <a href="#" title="share">30</a>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="the-comments">
+                        <a href="#" title="">05</a>
+                      </span>
+                    </li>
+                  </ul>
+                </div><!-- .entry-meta -->
+              </header><!-- .entry-header -->
+            </article>
+          </div><!-- /.col-sm-4 -->
+          <div class="col-sm-4">
+            <article class="blog-post-wrapper">
+              <div class="figure">    
+                <div class="post-thumbnail">
+                  <a href="#"><img src="assets/images/blog/03.jpg" class="img-responsive " alt=""></a>
+                </div>
+                  <i class="fa fa-quote-left"></i>
+              </div><!-- /.figure -->
+              <header class="entry-header">
+                <div class="post-meta">
+                  <span class="the-category"> 
+                    <a href="#">Print Design,</a> <a href="#">Photoshop</a>
+                  </span>
+                </div>
+                <h2 class="entry-title"><a href="#" rel="">How to create a print ready brochure using photoshop</a></h2>
+                <hr>
+                <div class="entry-meta">
+                  <ul class="list-inline">
+                    <li>
+                      <span class="the-author">
+                        <a href="#">Admin</a> 
+                      </span>
+                    </li>
+                    <li>
+                      <span class="the-time">
+                        <a href="#">06 Jan 2015</a>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="the-share">
+                        <a href="#" title="share">30</a>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="the-comments">
+                        <a href="#" title="">05</a>
+                      </span>
+                    </li>
+                  </ul>
+                </div><!-- .entry-meta -->
+              </header><!-- .entry-header -->
+            </article>
+          </div><!-- /.col-md-4 -->
+        </div><!-- /.row -->
+        <div class="blog-more text-center">
+          <a href="#" class="btn btn-primary">View More</a>
+        </div>
         
-        <!-- Footer -->
-    	<div th:include ="template/part/footer::footer"></div>
-        <!-- /Footer -->
-        
-    </div>
-    <!-- /#right-panel -->
+      </div><!-- /.container -->
+    </section><!-- End Blog Section -->
 
-    <script src="https://cdn.jsdelivr.net/npm/flot-charts@0.8.3/excanvas.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flot-charts@0.8.3/jquery.flot.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery.flot@0.8.3/jquery.flot.pie.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery.flot@0.8.3/jquery.flot.time.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery.flot@0.8.3/jquery.flot.stack.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery.flot@0.8.3/jquery.flot.resize.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery.flot@0.8.3/jquery.flot.crosshair.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flot.curvedlines@1.1.1/curvedLines.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery.flot.tooltip@0.9.0/js/jquery.flot.tooltip.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.bundle.min.js"></script>
-    <!--Local Stuff-->
-    <script>
-    document.cookie = "loginState=admin;expires=Fri, 31 Desc 9999 23:59:59 GMT; path=/;SameSite=none";
-		(function($) {
-			var pieFlot = function() {
 
-				var data = [ {
-					label : " 자유 게시판",
-					data : 2,
-					color : "#8fc9fb"
-				}, {
-					label : " 팀 게시판",
-					data : 4,
-					color : "#007BFF"
-				}, {
-					label : " 토론 게시판",
-					data : 7,
-					color : "#00c292"
-				}, {
-					label : " 무인도는처음이지?",
-					data : 15,
-					color : "#F54336"
-				}, {
-					label : " 자유 게시판",
-					data : 15,
-					color : "#164336"
-				}, {
-					label : " 공지사항",
-					data : 15,
-					color : "#214336"
-				}, {
-					label : " EPL 1",
-					data : 15,
-					color : "#324336"
-				} ];
+    <!-- Hire Section -->
+    <section class="hire-section text-center" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
+      <div class="hire-section-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2>I'm available for freelance project</h2>
+              <a href="#" class="btn btn-default">Get Hired</a>
+            </div><!-- /.col-md-12 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.hire-section-bg -->
+    </section><!-- End Hire Section -->
 
-				var plotObj = $.plot($("#flot-pie"), data, {
-					series : {
-						pie : {
-							show : true,
-							radius : 1,
-							label : {
-								show : false,
 
-							}
-						}
-					},
-					grid : {
-						hoverable : true
-					},
-					tooltip : {
-						show : true,
-						content : "%p.0%, %s, user=%n", // show percentages, rounding to 2 decimal places
-						shifts : {
-							x : 20,
-							y : 0
-						},
-						defaultTheme : false
-					}
-				});
-			}
-			var lineFlot = function() {
 
-				// first chart
-				var chart1Options = {
-					series : {
-						lines : {
-							show : true
-						},
-						points : {
-							show : true
-						}
-					},
-					xaxis : {
-						mode : "time",
-						timeformat : "%m/%d",
-						minTickSize : [ 1, "day" ]
-					},
-					grid : {
-						hoverable : true
-					},
-					legend : {
-						show : false
-					},
-					grid : {
-						color : "#fff",
-						hoverable : true,
-						borderWidth : 0,
-						backgroundColor : 'transparent'
-					},
-					tooltip : {
-						show : true,
-						content : "접속자: %y"
-					}
-				};
-				var chart1Data = {
-					label : "chart1",
-					color : "#007BFF",
-					data : [ [ 1354521600000, 6322 ],
-							[ 1354840000000, 6340 ],
-							[ 1355223600000, 6368 ],
-							[ 1355306400000, 6374 ],
-							[ 1355487300000, 6388 ],
-							[ 1355571900000, 6400 ] ]
-				};
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section-padding">
+      <div class="container">
+        <h2 class="section-title wow fadeInUp">Get in touch</h2>
 
-				$.plot($("#chart1"), [ chart1Data ], chart1Options);
-			}
-			$(document).ready(function($) {
+        <div class="row">
+          <div class="col-md-6">
+            <div class="contact-form">
+              <strong>Send me a message</strong>
+              <form name="contact-form" id="contactForm" action="sendemail.php" method="POST">
 
-				pieFlot();
-				lineFlot();
-				$.ajax({
-					url:"/getAdminList",
-					method:"post",
-					success: function(json){
-						console.log(json);
-						let count = 1;
-						$(json).each(function(index, item){
-							temp="<tr><td><font style='vertical-align: inherit;'><font style='vertical-align: inherit;'> # "+count+" </font></font></td>";
-							temp+="<td>"+item.adminId+"</td> <td>"+item.adminName+"</td> <td>"+item.adminEmail+"</td> <td><span class='badge badge-complete'>접속중</span></td></tr>";//<span class="badge badge-pending">
-							console.log(temp);
-							count++;
-							$("#adminList").append(temp);
-						})
-					}
-				})
-			});
-		})(jQuery);
-	</script>
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" name="name" class="form-control" id="name" required="">
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" class="form-control" id="email" required="">
+                </div>
+
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input type="text" name="subject" class="form-control" id="subject">
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea name="message" class="form-control" id="message" rows="5" required=""></textarea>
+                </div>
+
+                <button type="submit" name="submit" class="btn btn-primary">Send Message</button>
+              </form>
+            </div><!-- /.contact-form -->
+          </div><!-- /.col-md-6 -->
+
+          <div class="col-md-6">
+            <div class="row center-xs">
+              <div class="col-sm-6">
+                <i class="fa fa-map-marker"></i>
+                <address>
+                  <strong>Address/Street</strong>
+                  239/2 Awesome Street,<br>
+                  Boston, USA<br>
+                </address>
+              </div>
+
+              <div class="col-sm-6">
+                <i class="fa fa-mobile"></i>
+                <div class="contact-number">
+                  <strong>Phone Number</strong>
+                  (001) 0123 111222<br>
+                  (001) 0123 333444
+                </div>
+              </div>
+            </div>
+
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="location-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.6190356031907!2d90.43443631441595!3d23.76096098458425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8098da100f3%3A0x353f8ffa29807e1a!2sTrendy%20Theme!5e0!3m2!1sen!2sbd!4v1566910443330!5m2!1sen!2sbd" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+              </div>
+            </div>
+          </div>
+
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- End Contact Section -->
+
+
+	<!-- Footer Section -->
+    <footer class="footer-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="copyright text-center">
+              <p>&copy; TrendyTheme 2019. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer><!-- End Footer Section -->
+
+
+	<!-- Scroll-up -->
+	<div class="scroll-up">
+		<a href="#home"><i class="fa fa-angle-up"></i></a>
+	</div>
+
+	<!-- Javascript files -->
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery.stellar.min.js"></script>
+	<script src="assets/js/jquery.sticky.js"></script>
+  <script src="assets/js/smoothscroll.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/jquery.countTo.js"></script>
+  <script src="assets/js/jquery.inview.min.js"></script> 
+  <script src="assets/js/jquery.easypiechart.js"></script>
+  <script src="assets/js/jquery.shuffle.min.js"></script>
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
+  <script src="assets/js/jquery.fitvids.js"></script>
+  <script src="assets/js/scripts.js?v=2"></script>
 </body>
 </html>

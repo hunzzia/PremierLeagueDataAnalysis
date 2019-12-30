@@ -36,14 +36,14 @@ public class AdminController {
 		return "redirect:/login";
 	}
 
-	@GetMapping("/index")
-	public String index(HttpSession session, Model model) {
+	@GetMapping("/adminIndex")
+	public String adminIndex(HttpSession session, Model model) {
 		Admin loginState = (Admin) session.getAttribute("loginState");
 		/*
 		 * if (session.getAttribute("loginState") == null) { return "login"; }
 		 */
 		model.addAttribute("loginState", loginState);
-		return "index";
+		return "adminIndex";
 	}
 	@GetMapping("/scheduler")
 	public String scheduler(HttpSession session, Model model) {
@@ -108,7 +108,7 @@ public class AdminController {
 		return "modifyAdminPw";
 	}
 	
-	@GetMapping("/")
+	@GetMapping("/main")
 	public String main() {
 		return "main";
 		
